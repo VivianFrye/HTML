@@ -1,0 +1,306 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    max-height: 100%; /* se adpte a pag web a altura cualq dispositivo*/
+}
+body{
+    font-family: Tahoma;
+    font-size: 18px;
+    background-image: url(../img/incap\ se\ invencible2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* sección cabecera PC*/
+#header{
+    background-color: beige;
+    border:2px solid blue;
+    border-radius: 20px 20px 10px 10px;
+    display: flex;
+    flex-direction: row; /*dirección horizontal o en fila*/
+    justify-content: center; /* alinea horizontalmente*/
+    align-items: center; /* alinea verticalmente*/
+    grid-area: header;
+}
+/* seccion menu */
+ul{
+    padding: 0 0;
+    margin: 0 1px;
+}
+li{
+
+    list-style: none;
+    font: bold 12px verdana;
+    margin: 0 5px;
+}
+a{
+    color: wheat;
+    text-decoration: none;
+}
+#menu{
+    grid-area: nav; /* asigna nombre a contenedor*/
+    background-color: blue;
+    border: 2px solid green;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5pv
+
+}
+/* menu y submenu nuevo */
+.menuB >li{
+    position: relative;
+    display: inline-block;
+}
+.menuB >li >a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menuB li a:hover {
+    color: lightgreen;
+    transition: all .3s;
+}
+/* Submenu */
+.submenu{
+    position: absolute;
+    background: blue;
+    width: 120%;
+    display: none;
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+/* estilos para aplicar al pasar mouse en menu opciones se despliega submenu respectivo */
+.menuB li:hover .submenu{
+    display: block;
+    z-index: 100;
+}
+
+
+/* nuevo estilo para buscador */
+.buscador input{
+    height: 25px;
+    width: 0px;
+    padding: 0px 0px;
+    border-radius: 40px;
+    border: 0px;
+    padding-right: 50px;
+    transition: 0.8s ease;
+}
+/* Se aplica una pseudoclase hover para expandir ancho de buscador */
+.buscador input:hover{
+    width: 150px;
+    padding-left: 10px;
+    outline: none; /* quitar bordes */
+}
+
+/* seccion contenido */
+#main{
+    grid-area: main; /* matricula nombre al contenedor section para grid */
+    border: 2px solid green;
+    /* se define ancho y altura contenedor para ajustar a vista a dispositivo actual */
+    max-width: 100%;
+    height: auto;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+}
+figure, figcaption{
+    display:inline;
+    margin: 45px;
+    padding: 5px 5px;
+}
+.programa{
+    display: inline-block;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    width: 45%;
+    height: 200px;
+    position:relative;
+    border: 1px solid black;
+    border-radius: 15px 15px;
+
+}
+
+section article{
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+    margin: 20px;
+    }
+
+
+    /* seccion barra lateral */
+    #sidebar{
+        grid-area: sidebar;/* se asigna nombre a contenedor  */
+        display: flex;
+        flex-direction: column;/* se define dirección en forma columna */
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255,255,255,0.6);
+        backdrop-filter: blur(5px);
+    }
+    /* se define ancho y altura contenedor para ajustar a vista de dispositivo actual */
+    iframe{
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* seccion pie de pagina */
+#footer{
+    grid-area: footer; /* se asigna nombre a contenedor */
+    padding-top: 20px;
+    border: 2px solid green;
+    border-radius: 20px 20px 10px 10px;
+    clear: both;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(20px);
+ }
+#redes a {
+    padding: 5px;
+    margin: 0px;
+    }
+#redes a i :hover{
+    transform: scale(1.5);
+    }
+    /* estilos iconos fontawesome */
+i[ class^="fa"]{
+    color: grey;
+    font-size: 18px;
+}
+
+/* iconos fontawesome BAR SOCIAL */
+i[class^="fab"]{
+    color: grey;
+    font-size: 30px;
+    border: 1px solid transparent;
+    margin:0px
+}
+
+/* sección CSS GRID DISEÑO WEB RESPONSIVE */
+/* sE DEFINE ESTILOS AL CONTENEDOR grid en general vista pc*/
+#grid-container > *{
+    text-align: center;
+    box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.75);
+}
+/* se define estilo al contenedor grid en general vista PC a 3 COLUMNAS*/
+#grid-container{
+    display: grid;
+    grid-gap:10px;
+    grid-template:
+    "header header header" 150px
+    "nav nav nav" 50px
+    "main main sidebar" 450px
+    "main main sidebar" 250px
+    "footer footer footer" 150px /
+    1300px 150px 300px;
+
+
+}
+/* SECCION VISTA DE TABLETS 2 COLUMNAS---- */
+@media (max-width:1024px){
+    #grid-container{
+        grid-template:
+        "header header" 170px
+        "nav main" 800px
+        "nav main" 700px
+        "sidebar sidebar" 650px
+        "footer footer" 100px /
+        250px 450px;
+        font-size: 75%; /* cambia el tamaño de la letra */
+    }
+    #menu{
+        background-color: blue;
+        border-radius: 22px;
+        display: block;
+        padding: 45px;
+        margin: 40px;
+        height: auto;
+        text-align: center;
+    }
+    #main{
+        display: flex;
+        flex-direction: column;  /* cambia la forma de dirección de fila a col */
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;/* se define el auto ajuste de ancho dispositivo pasa a sgt. linea */
+        max-width: 100%;
+
+    }
+    .programa{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+        border: 1px solid black;
+
+    }
+    iframe{
+        max-width: 100%;
+        height: auto;
+    }
+    .buscador{
+        display: block;
+        padding: 5px;
+    }
+    }
+    /* SECCION VISTA DE CELULAR UNA COLUMNA */
+@media (max-width:640px){
+    #grid-container{
+        grid-template:
+        "header"150px
+        "nav" 50px
+        "main" 1120px
+        "sidebar" 800px
+        "footer" 100px /
+        500px;
+        font-size: 60%;
+    }
+    /* Nota: la barra <nav> se programará con javascript_
+    por medio de funciones en boton hamburgesa*/
+    #menu{
+        display: none; /*se oculta contenedro nav opciones*/
+    }
+    /* se define que aparezca el menu hamburgesa en la parte superior */
+
+
+    #main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        height: auto;
+    }
+.programa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid black;   
+}
+iframe{
+    max-width: 100%;
+    height: auto;
+}
+.buscadorbox{
+    display: none;
+}
+}
+
+
