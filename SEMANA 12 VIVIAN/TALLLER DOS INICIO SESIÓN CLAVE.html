@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIO SESIÓN</title>
+    <!-- link de sitio sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="IMG/NU.jpeg" alt="" width="150" height="150">
+        <h1>VALIDACIÓN DE INGRESO DE USUARIO</h1>
+        <h2>SISTEMA DE GESTIÓN BANCO NUBANK</h2>
+        <h3>SE PERMITIRÁ SOLO 3 INTENTOS</h3>
+        <br><br>
+        <script>
+            var pasw2;//contraseña ingresada por usuario
+            var sw=0;//Variable de control con ingreso apagada
+            var clave=12345;//clave asignada
+            //ciclo for
+            for(f=1;f<=3;f++)
+            {
+                pasw2=parseInt(prompt("INGRESE CONTRASEÑA DE INGRESO"));
+                //condiconal clave
+                if(pasw2==clave)
+                {
+                    swal("APRECIADO USUARIO","acceso otorgado","success");
+                    sw=1;//var control actividad
+                    break;//salga del ciclo
+                }
+            }
+            //salida
+            if(sw==0){
+                swal("APRECIADO USUARIO","ACCESO BLOQUEADO","ERROR");
+                document.write("<front color='red'>"+"SU ACCESO HA SIDO BLOQUEADO...ESPERE 1 MINUTO..."+"</front>");
+                }else{
+                    document.write("<front color='blue'>"+"BIENVENIDO A SU SISTEMA DE GESTIÓN NUBAKN"+"</front>");
+                }
+        </script>
+    </center>  
+</body>
+</html>

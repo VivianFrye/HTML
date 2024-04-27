@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NÚMEROS PARES</title>
+</head>
+<body>
+<center>
+    <h1>GENERACIÓN DE NÚMEROS PARES</h1>
+    <h2>RANGOS INICIO Y FINAL SOLICITADOS POR USUARIO</h2>
+    <br><br>
+    <script>
+        let inicio, final;//variables de ciclo for
+        let num=0;//contador
+        inicio=parseInt(prompt("INGRESE NUMERO DE INICIO DE RANGO"));
+        final=parseInt(prompt("INGRESE NUMERO FINAL DE RANGO"));
+        //CICLO FOR
+        for(f=inicio;f<=final;f++)
+        {
+            if(f%2==0) // para evaluar residuo, si da 0 es numero par
+            {
+                document.write("NUMERO PAR.."+f+"<br>");
+                num++; //contador de los numeros pares generados ++num=num1
+            }
+        } 
+//salida de cantidad generados
+           document.write("*************"+"<br>");
+           document.write("<br>");
+           document.write("cantidad de números pares generados...."+num+"<br>");
+           document.write("**********************"+"<br>");
+    </script>
+</center>    
+</body>
+</html>
