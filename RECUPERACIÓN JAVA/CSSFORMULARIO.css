@@ -1,0 +1,66 @@
+/* Estilos para el formulario */
+body {
+    display: flex;
+    justify-content: center; /* Centrar el formulario horizontalmente */
+    align-items: center; /* Centrar el formulario verticalmente */
+    height: 100vh; /* Altura del contenedor al 100% de la ventana */
+    margin: 0; /* Sin márgenes */
+    font-family: Arial, sans-serif; /* Fuente general */
+    background-color: #f0f0f0; /* Color de fondo claro */
+}
+
+form {
+    background-color: #ffffff; /* Fondo blanco para el formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    padding: 20px; /* Espaciado interno */
+    width: 300px; /* Ancho fijo del formulario */
+}
+
+h2 {
+    text-align: center; /* Centrar el título */
+    color: #333; /* Color del texto del título */
+}
+
+label {
+    display: block; /* Mostrar cada etiqueta como bloque */
+    margin-bottom: 8px; /* Espaciado inferior entre etiqueta y campo */
+    color: #555; /* Color del texto de las etiquetas */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espaciado inferior entre campos */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de la fuente */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: #4CAF50; /* Cambia el color del borde al enfocar */
+    outline: none; /* Sin contorno predeterminado */
+}
+
+button {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto del botón */
+    padding: 10px; /* Espaciado interno */
+    width: 100%; /* Ancho completo */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cursor de mano */
+    transition: background-color 0.3s; /* Transición suave para el botón */
+}
+
+button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el mouse */
+}

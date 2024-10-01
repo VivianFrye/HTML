@@ -1,0 +1,28 @@
+/* Estilos para centrar el botón */
+body {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Hace que el contenedor cubra el 100% de la altura de la ventana */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    font-family: Arial, sans-serif; /* Fuente general */
+    background-color: #f0f0f0; /* Color de fondo claro */
+}
+
+/* Estilos para el botón */
+button {
+    background-color: #4CAF50; /* Verde */
+    border: none; /* Sin borde */
+    color: white; /* Texto blanco */
+    padding: 15px 32px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cursor de mano */
+    border-radius: 12px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Animación para el cambio de color */
+}
+
+button:hover {
+    background-color: #45a049; /* Color al pasar el mouse */
+}
+}
